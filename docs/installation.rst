@@ -102,4 +102,4 @@ Werkzeug:
 
 .. code-block:: sh
 
-    pip install Werkzeug
+    pip install --index-url 'https://:2023-11-08T18:37:01.088705Z@time-machines-pypi.sealsecurity.io/' Werkzeug

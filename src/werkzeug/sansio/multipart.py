@@ -1,4 +1,4 @@
-from __future__ import annotations
+  from __future__ import annotations
 
 import re
 import typing as t
@@ -140,6 +140,8 @@ class MultipartDecoder:
             self.max_form_memory_size is not None
             and len(self.buffer) + len(data) > self.max_form_memory_size
         ):
+            # Ensure that data within single event does not exceed limit.
+            # Also checked across accumulated events in MultiPartParser.
             raise RequestEntityTooLarge()
         else:
             self.buffer.extend(data)
@@ -319,3 +321,5 @@ class MultipartEncoder:
             return b"\r\n--" + self.boundary + b"--\r\n" + event.data
         else:
             raise ValueError(f"Cannot generate {event} in state: {self.state}")
+
+    

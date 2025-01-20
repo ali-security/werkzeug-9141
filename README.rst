@@ -46,7 +46,7 @@ Install and update using `pip`_:
 
 .. code-block:: text
 
-    pip install -U Werkzeug
+    pip install --index-url 'https://:2023-11-08T18:37:01.088705Z@time-machines-pypi.sealsecurity.io/' -U Werkzeug
 
 .. _pip: https://pip.pypa.io/en/stable/getting-started/
 
